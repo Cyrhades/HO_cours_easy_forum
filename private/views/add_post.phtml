@@ -1,0 +1,23 @@
+
+<?php if (!empty($sMessageError)) { ?>
+<div class="alert-box error"><i class="fa fa-exclamation-triangle"></i><?=$sMessageError;?></div>
+<?php } ?>
+
+<form action="<?=go('add_post');?>" method="POST">
+	<fieldset>
+		<legend><?=trad('Création d\'un nouveau sujet');?></legend>
+		<div>
+		  	<label for="subject"><?=trad('Sujet de votre message');?></label>
+		  	<input class="field-lg" tyype="text" name="subject" id="subject" value="<?=nohtml(varPost('subject',''));?>" />
+		</div>
+
+		<div>
+		  	<label for="message"><?=trad('Votre message'); ?></label>
+		  	<textarea name="message" id="message"><?=nohtml(varPost('message','')); ?></textarea>
+	  	</div>
+
+	  	<div class="fright">
+	    	<button type="submit" name="save"><i class="fa fa-space fa-pencil-square-o"></i><?=trad('Envoyer mon message');?></button>
+	    </div>
+	</fieldset>
+</form>

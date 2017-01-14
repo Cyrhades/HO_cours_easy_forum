@@ -1,0 +1,30 @@
+<form method="POST">
+    <button formaction="<?=go('add_post');?>"><i class="fa fa-space fa-plus"></i><?=trad('Créer un post');?></button>
+	<?php if (is_array($aPosts) && count($aPosts) > 0) { ?>
+	<table class="posts">
+		<thead>
+			<tr>
+				<th class="left" width="50%"><?=trad('Titre');?></th>
+				<th width="5%"><?=trad('Réponse(s)');?></th>
+				<th width="15%"><?=trad('Date création');?></th>
+				<th width="1%"></th>
+			</tr>
+		</thead>
+		<tbody>
+			<?php foreach ((array) $aPosts as $iIndex => $aCurrentPost) { ?>
+			<tr>
+				<td class="left"><?=nohtml($aCurrentPost[$sIndexPosts['titre']]);?></td>
+				<td><?=nohtml($aCurrentPost['nb_reponses']);?></td>
+				<td><?=nohtml($aCurrentPost[$sIndexPosts['date_creation']]);?></td>
+				<td>
+					<a href="<?=go('read_post',array('id_post' => $aCurrentPost['id_post']));?>" title="<?=trad('Lire ce post');?>"><i class="fa fa-eye"></i></a>
+				</td>
+			</tr>
+			<?php } ?>
+		</tbody>
+	</table>
+	<?php include view('pagination'); ?>
+</form>
+<?php } else { ?>
+<div class="alert-box error"><i class="fa fa-exclamation-triangle"></i><?=trad('Il n\'y a actuellement aucun post sur notre forum.');?></div>
+<?php } ?>

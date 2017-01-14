@@ -1,0 +1,47 @@
+<?php if (!empty($sMessageError)) { ?>
+<div class="alert-box error"><i class="fa fa-exclamation-triangle"></i><?=$sMessageError;?></div>
+<br /><br />
+<form action="<?=go('');?>" method="POST">
+	<button type="submit" name="return"><i class="fa fa-space fa-home"></i><?=trad('Retourner à l\'accueil');?></button>
+</form>
+<?php } else { ?>
+
+<div class="read_post">
+	<div class="post">
+		<h2><?=nohtml($aPost[$sIndexPosts['titre']]);?> </h2>
+		<span class="date"><?=print_date($aPost[$sIndexPosts['date_creation']]);?></span>
+		<p>
+			<?=nl2br(nohtml($aPost[$sIndexPosts['message']]));?>
+		</p>
+	</div>
+
+	<?php foreach ($aResponses as $iKey => $aResponse) { ?>
+	<div class="response">
+		<span class="date"><?=print_date($aResponse[$sIndexPosts['date_creation']]);?></span>
+		<p>
+			<?=nl2br(nohtml($aResponse[$sIndexPosts['message']]));?>
+		</p>
+	</div>
+	<?php } ?>
+</div>
+
+<?php include view('pagination'); ?>
+
+<form action="<?=go('read_post',array('id_post' => $iIdPost));?>" method="POST">
+	<fieldset>
+		<legend><?=trad('Répondre');?></legend>
+
+		<div>
+		  	<label for="message"><?=trad('Votre message'); ?></label>
+		  	<textarea name="message" id="message"><?=nohtml(varPost('message','')); ?></textarea>
+	  	</div>
+
+	  	<div class="fright">
+	    	<button type="submit" name="save"><i class="fa fa-space fa-pencil-square-o"></i><?=trad('Envoyer ma réponse');?></button>
+	    </div>
+	</fieldset>
+</form>
+
+
+<?php } ?>
+

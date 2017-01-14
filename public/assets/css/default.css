@@ -1,0 +1,190 @@
+/**
+ * @use : 	font-family: 'Aldrich', sans-serif;
+ * 			font-family: 'Homenaje', sans-serif;
+ */
+@import url('https://fonts.googleapis.com/css?family=Aldrich|Homenaje');
+
+a, a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none;
+    color : #1b75bb;
+}
+body { 	
+	font-family: 'Aldrich', sans-serif;
+	font-size: 16px;
+}
+.fleft {float:left;}
+.fright {float:right;}
+div.container {
+	margin:auto;
+	max-width:1024px;
+	text-align:center;
+}
+div.container-principal {
+	margin-top :50px;
+}
+
+/** Formulaire */
+form fieldset  {  
+	text-align:left;
+	border:none;
+	max-width:600px;
+}
+form fieldset div {  
+	margin-top:15px;
+}
+form fieldset legend {  
+	line-height: 80px; 
+	font-family: 'Aldrich', sans-serif;
+	font-size:32px;
+	color : #1b75bb;
+}
+
+form fieldset input {
+	display :block;
+	width: 100%;
+	height: 30px;
+	padding:2px;
+	border: 2px solid #1b75bb;
+}
+form fieldset input.field-lg {
+	width: 440px;
+}
+form fieldset textarea {
+	display :block;
+	width: 100%;
+	height: 200px;
+	padding:2px;
+	border: 2px solid #1b75bb;
+}
+
+form fieldset button {
+	margin-top : 30px;
+	margin-right : 5px;
+}
+
+button i.fa.fa-space {
+	margin-right:10px;
+}
+button {
+	 padding:5px;
+	 margin-left:5px;
+	 box-shadow:1px 1px 1px #1b75bb;
+	 cursor:pointer;
+ }
+/** Les alertes */
+.alert-box { 
+	margin :20px;
+	padding:15px; 
+	border-radius:10px;
+	font-family:Tahoma,Geneva,Arial,sans-serif;
+	font-size:16px;
+}
+.alert-box span {font-weight:bold;  text-transform:uppercase; }
+.alert-box .fa {font-size:24px; margin-right :15px;}
+.error   {background:#ffecec; border:1px solid #f5aca6; }
+.error .fa  {color:#f5aca6;}
+.success {background:#e9ffd9; border:1px solid #a6ca8a; }
+.success .fa  {color:#a6ca8a;}
+.warning {background:#fff8c4; border:1px solid #f2c779; }
+.warning .fa  {color:#f2c779;}
+.notice  {background:#e3f7fc; border:1px solid #8ed9f6; }
+.notice .fa  {color:#8ed9f6;}
+
+
+/** Header */
+#logo {
+	background: url('../img/logo.png');
+	background-size: 80px auto;
+	background-repeat:no-repeat;
+	width : 280px;
+	height :80px;
+	margin-top:10px;
+}
+
+#logo span {
+	line-height: 80px; 
+	margin-left : 100px;
+	font-family: 'Homenaje', sans-serif;
+	font-size:36px;
+	color : #1b75bb;
+}
+
+
+/** Liste des message */
+table.posts {
+	width :100%;
+	border: 1px solid #2e3092;
+	border-collapse:collapse;
+	margin-top : 20px;
+	font-family:Tahoma,Geneva,Arial,sans-serif;
+}
+table.posts th {
+	text-align: center;
+	border: 3px solid #D0E3FA;
+	padding: 8px;
+	background-color: #1b75bb;
+	color : #ffffff;
+}
+table.posts td {
+	border: 1px solid #1b75bb;
+	text-align: center;
+	background-color: #ffffff;
+	padding: 5px;
+}
+
+table.posts th.left, table.posts td.left {
+	text-align: left;
+}
+
+
+/** read post */
+.read_post {
+	margin-left :50px;
+	text-align: left;
+	font-family:Tahoma,Geneva,Arial,sans-serif;
+	font-size:14;
+	color : #1b75bb;
+}
+.read_post .post {
+	margin-bottom :50px;
+	border-bottom:1px solid #1b75bb;
+}
+.read_post .post p {
+	color: #000000;
+}
+.read_post .response {
+	margin-bottom :30px;
+	border-bottom:1px solid #cccccc;
+}
+.read_post .date {
+	font-size:11px;
+	color : #555555;
+}
+
+
+/** pagination */
+div.pagination { margin-top : 30px; text-align:center;} 
+div.pagination ul { border:0; margin:0; padding:0;}
+div.pagination ul li { font-size:16px; list-style:none; display:inline-block;}
+div.pagination ul a { border:solid 1px #ffffff; }
+
+div.pagination ul a:link, div.pagination ul a:visited 
+{
+    color:#1b75bb;
+    padding:4px 10px;
+    text-decoration:none;
+}
+ 
+div.pagination ul a:hover
+{
+    border:solid 1px #D0E3FA;
+    background: #D0E3FA;
+    color:#1b75bb;
+}
+div.pagination ul a.active
+{
+    border:solid 1px #1b75bb;
+    background: #1b75bb;
+    color:#ffffff;
+}

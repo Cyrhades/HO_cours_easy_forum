@@ -1,0 +1,25 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<title>Easy-Forum</title>
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css" type="text/css" media="all" rel="stylesheet" />
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" media="all" rel="stylesheet" />
+		<link href="<?=asset('default.css','css');?>" type="text/css" media="all" rel="stylesheet" />
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<a href="<?=go('/');?>">
+					<div id="logo"><span>Easy-Forum</span></div>
+				</a>
+			</div>
+		</header>
+
+		<div class="container container-principal">
+			<?php
+			// Chargement de la vue
+			include view($sView);
+			?>
+		</div>
+	</body>
+</html>

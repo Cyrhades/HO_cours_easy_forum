@@ -1,0 +1,11 @@
+<?php if (isset($aPagination) && count($aPagination) > 1) { ?>
+<div class="pagination">
+	<ul>
+		<?php foreach ((array) $aPagination as $iNumPage => $sUrl) { ?>
+		<li>
+			<a<?=( $iNumPage == $iCurrentPage? ' class="active"' :'');?> href="<?=$sUrl;?>"><?=$iNumPage;?></a>
+		</li>
+		<?php } ?>
+	</ul>
+</div>
+<?php } ?>
