@@ -46,7 +46,7 @@ else {
 	$aPost = getPostById($iIdPost, ';');
 	
 	// Nous devons récupérer les réponses de ce post
-	$aResponses = getAllResponses($iIdPost, $iCurrentPage, NB_LIMIT_RESPONSES,';');
+	$aResponses = getAllResponses($iIdPost, $iCurrentPage, NB_LIMIT_RESPONSES);
 
 	// Cette méthode va nous générer une tableau pour la pagination
 	$aPagination = pagination(

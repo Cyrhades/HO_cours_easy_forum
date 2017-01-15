@@ -7,9 +7,8 @@ require_once DIR_INC.'functions_posts.php';
 // Si une page en particulier est demandée (on recoit un numéro) via $_GET['num_page']
 $iCurrentPage = (isset($_GET) && isset($_GET['num_page']) ? (int) $_GET['num_page'] : 1);
 
-// On utilise 2 méthodes getAllFirstLine qui nécessite la liste de fichiers 
-// csv que l'on peut récupérer avec getAllPosts
-$aPosts = getAllFirstLine(getAllPosts($iCurrentPage, NB_LIMIT_POSTS), ';');
+// On récupére la liste des posts de la page souhaitée
+$aPosts = getAllPosts($iCurrentPage, NB_LIMIT_POSTS);
 
 // On ne permet pas l'acces à une page ou il n'y a pas de messages
 // sauf si on est en page un (on peut avoir un forum sans message)
@@ -23,3 +22,4 @@ if (count($aPosts) == 0 && $iCurrentPage > 1) {
 // Cette méthode va nous générer une tableau pour la pagination
 // (la variable ser utilisée dans la vue pagination.phtml)
 $aPagination = pagination('posts', $iCurrentPage, NB_LIMIT_POSTS);
+

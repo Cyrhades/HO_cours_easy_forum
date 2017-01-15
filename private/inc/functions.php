@@ -231,12 +231,12 @@ function pagination($sType, $iPage = 1, $iLimit = 50, $aParams = array())
 	{
 		case 'posts' :	
 			// Nombre de posts existants
-			$iNbElement = numberPostsReal(); 
+			$iNbElement = numberPosts(); 
 			break;
 		case 'responses' : 	
 			$sGoto = 'read_post';
 			if (isset($aParams['id_post'])) {
-				$iNbElement = numberResponsesReal($aParams['id_post']); 
+				$iNbElement = numberResponses($aParams['id_post']); 
 			}
 			break;
 	}
