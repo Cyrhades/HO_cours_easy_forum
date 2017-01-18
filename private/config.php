@@ -10,7 +10,7 @@
 
 // Constante de l'url du site (le seul paramétre à modifier pour faire fonctionner
 // Easy-Forum sur un autre serveur)
-define('URL_SITE','http://127.0.0.1/easy_forum/');
+define('URL_SITE','http://127.0.0.1/HO_cours_easy_forum/');
 
 // constante des assets
 define('URL_ASSETS',URL_SITE.'public/assets/');
