@@ -1,20 +1,20 @@
 # HO_cours_easy_forum
-Easy Forum est utilisé pour faire un cours de PHP en procédural, il est conçu de façon à introduire l'étudiant au pattern MVC
+Easy Forum est utilisÃ© pour faire un cours de PHP en procÃ©dural, il est conÃ§u de faÃ§on Ã  introduire l'Ã©tudiant au pattern MVC
 
 ______________________________________________________________________________________________
 POSTULAT
 
-Le point d'entrée est VOTRE chemin vers easy_forum (exemple http://127.0.0.1/easy_forum)
-il est automatiquement redirigé dans l'index ./public/index.php 
-Ci besoin modifier le fichier ./private/config.php en modifiant 
-la constante URL_SITE actuellement "http://127.0.0.1/easy_forum/"
+Le point d'entrÃ©e est VOTRE chemin vers easy_forum (exemple http://127.0.0.1/easy_forum)
+il est automatiquement redirigÃ© dans l'index ./public/index.php 
+Si besoin modifier le fichier ./private/config.php en modifiant 
+la constante URL_SITE actuellement "http://127.0.0.1/HO_cours_easy_forum/"
 ______________________________________________________________________________________________
 
 
 
-/!\ Ne mettez pas en l'état sur un serveur de production (en ligne).
-	easy-forum est un code permettant une découverte de la structure MVC
-	sans connaitre la POO, il est très commenté pour guider dans l'apprentissage.
+/!\ Ne mettez pas en l'Ã©tat sur un serveur de production (en ligne).
+	easy-forum est un code permettant une dÃ©couverte de la structure MVC
+	sans connaitre la POO, il est trÃ¨s commentÃ© pour guider dans l'apprentissage.
 	
 	
 ______________________________________________________________________________________________
@@ -24,21 +24,20 @@ ________________________________________________________________________________
 
  - Connaissance de HTML / CSS 
  - Connaissance de la syntaxe de PHP 
- - Structure MVC
- - Déclaration de variables
- - Déclaration de constantes
+ - DÃ©claration de variables
+ - DÃ©claration de constantes
  - Conditions en PHP
  - Switch
  - Boucles for, foreach, while
- - Création et appel de fonctions
- - Compréhension de la documentation sur http://php.net/manual/fr
+ - CrÃ©ation et appel de fonctions
+ - ComprÃ©hension de la documentation sur http://php.net/manual/fr
  
   	
 	______________________________________________________________________________________________
   
   
   
- **Liste des fonctions natives PHP utilisées dans Easy-Forum**
+ **Liste des fonctions natives PHP utilisÃ©es dans Easy-Forum**
  
  - require, require_once, include, include_once
  - isset, empty, is_array
@@ -60,16 +59,17 @@ ________________________________________________________________________________
   
   
  
- Pour le moment la sécurité n'est pas très présente, n'importe qui peut poster 
- sur le forum sans être identifié, il n'y pas de systeme de captcha ou d'antiflood
- vous pouvez vous amusez à créer des modules complémentaire pour ce forum
+ Pour le moment la sÃ©curitÃ© n'est pas trÃ¨s prÃ©sente, n'importe qui peut poster 
+ sur le forum sans Ãªtre identifiÃ©, il n'y pas de systeme de captcha ou d'antiflood
+ vous pouvez vous amusez Ã  crÃ©er des modules complÃ©mentaires pour ce forum
  
- - Enregistrement utilisateur
- - Systeme antifllod
- - Captcha (peut être un peu dur pour le moment (indice librairie GD))
+ - Enregistrement utilisateurs / profils
+ - SystÃ¨me antiflood / Token / etc
+ - Captcha (peut Ãªtre un peu dur pour le moment (indice librairie GD))
  - multi langue
  - multi theme
  - mode CSV / mode SQL
+ - Gestion de catÃ©gories pour le forum (classement des posts)
  - ou autres
   
  
