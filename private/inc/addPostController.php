@@ -9,8 +9,8 @@ $sMessageError = ''; // Par défaut pas d'erreur (vide), mais on déclare la var
 // @see http://php.net/manual/fr/function.sizeof.php (sizeof est un alias de count)
 if (sizeof($_POST) > 0 && isset($_POST['save'])) {
 	
-	// POST['save'] est le nom que l'on a donné à autre bouton submit dans la vue "add_post.phtml"
-	// en vérifiant celui ci on s'assure que l'utilisateur à cliqué sur enregistré
+	// POST['save'] est le nom que l'on a donné à notre bouton submit dans la vue "add_post.phtml"
+	// en vérifiant celui ci on s'assure que l'utilisateur à cliqué sur "enregistrer"
 
 	// On laisse la méthode gérer l'enregistrement
 	$mResponse = savePost($_POST);
