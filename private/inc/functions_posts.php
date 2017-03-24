@@ -1,6 +1,6 @@
 <?php
 
-// Plus tard on fera peut être du SQL plutot que du CSV
+// Plus tard on fera peut-être du SQL plutôt que du CSV
 require 'functions_posts_csv.php';
 
 
@@ -76,7 +76,7 @@ function numberResponses($iIdPost)
  * @package : easy-forum
  *
  * @param string La page souhaitée
- * @param string Nombre de fichiers a retourner
+ * @param string Nombre de fichiers à retourner
  *
  * @return array Liste des posts
  */
@@ -96,7 +96,7 @@ function getAllPosts($iPage = 1, $iLimit = 50)
  * @author : LECOMTE Cyril <cyrhades76@gmail.com>
  * @package : easy-forum
  *
- * @param array Les données nécessaire à l'enregistrement
+ * @param array Les données nécessaires à l'enregistrement
  *
  * @return integer ID du post
  */
