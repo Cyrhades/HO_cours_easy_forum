@@ -17,13 +17,13 @@ if ($iIdPost == 0 || ! postExists($iIdPost)) {
 	$sMessageError = trad('Ce post n\'existe pas ou a été supprimé.');
 }
 else {
-	// On doit vérifier si un enregistrement est soumi (on recoit une réponse)
+	// On doit vérifier si un enregistrement est soumis (on reçoit une réponse)
 	// @see http://php.net/manual/fr/function.sizeof.php 
 	if (sizeof($_POST) > 0 && isset($_POST['save'])) {
 
 		// POST['save'] est le nom que l'on a donné à notre bouton submit 
 		// dans la vue "read_post.phtml" en vérifiant celui ci on 
-		// s'assure que l'utilisateur à cliqué sur "enregistrer"
+		// s'assure que l'utilisateur a cliqué sur "enregistrer"
 
 		// On laisse la méthode gérer l'enregistrement
 		$mResponse = saveResponse($iIdPost, $_POST);
