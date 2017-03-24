@@ -48,7 +48,7 @@ function routeur($sPage)
 }
 
 /**
- * Anticipation pour une gestion avancé du routage (pour un éventuel url rewriting)
+ * Anticipation pour une gestion avancée du routage (pour un éventuel url rewriting)
  *
  * @author LECOMTE Cyril <cyrhades76@gmail.com>
  * @since 2017-01-07
@@ -107,7 +107,7 @@ function trad($sText)
  * @package easy-forum
  *
  * @param string chaine à protéger
- * @return string chaine protégé contre faille XSS
+ * @return string chaine protégée contre faille XSS
  */
 function nohtml($sText)
 {
@@ -130,7 +130,7 @@ function print_date($sDate)
 }
 
 /**
- * Retourne la valeur d'une variable GET ou la valeur envoyé  
+ * Retourne la valeur d'une variable GET où la valeur envoyée  
  * en second paramétre ($mDefault) si l'index n'existe pas dans GET 
  *
  * @author LECOMTE Cyril <cyrhades76@gmail.com>
@@ -151,7 +151,7 @@ function varGet($sIndexTarget, $mDefault = null)
 }
 
 /**
- * Retourne la valeur d'une variable POST ou la valeur envoyé  
+ * Retourne la valeur d'une variable POST où la valeur envoyée  
  * en second paramétre ($mDefault) si l'index n'existe pas dans POST 
  *
  * @author LECOMTE Cyril <cyrhades76@gmail.com>
@@ -159,7 +159,7 @@ function varGet($sIndexTarget, $mDefault = null)
  * @package easy-forum
  *
  * @param string index recherché dans POST
- * @return mixed valeur renvoyé si l'index n'existe pas dans POST
+ * @return mixed valeur renvoyée si l'index n'existe pas dans POST
  */
 function varPost($sIndexTarget, $mDefault = null) {
 	if (isset($_POST) && isset($_POST[$sIndexTarget]))
@@ -194,8 +194,8 @@ function asset($sAssetName, $sAssetDirectory = '')
  */
 function view($mView)
 {
-	// is_array verifie si la variable est de type array
-	// count compte le nombre d'élément
+	// is_array vérifie si la variable est de type array
+	// count compte le nombre d'éléments
 	if (is_array($mView) && count($mView) == 2) {
 		// On retourne le chemin complet
 		return DIR_VIEWS.$mView[0].DS.$mView[1].'.phtml';
@@ -206,7 +206,7 @@ function view($mView)
 		return DIR_VIEWS.$mView.'.phtml';
 	}
 	else {
-		// On verra plus tard mais la on a pas recu ce que nous attendions (Exception)
+		// On verra plus tard mais là on n'a pas reçu ce que nous attendions (Exception)
 	}
 }
 
@@ -216,13 +216,13 @@ function view($mView)
  * @param string Type de la pagination (pour accéder à la bonne méthode)
  * @param integer Numéro de la page courante
  * @param integer Nombre d'éléments par pages
- * @param array Les éventuels paramétres à fournir à la page
+ * @param array Les éventuels paramètres à fournir à la page
  *
  * @return array numéro page => lien vers les pages
  */
 function pagination($sType, $iPage = 1, $iLimit = 50, $aParams = array())
 {
-	$iNbElement = 0;	// Nombre total d'élément
+	$iNbElement = 0;	// Nombre total d'éléments
 	$sGoto = '';		// par défaut c'est la home
 	$aPages = array();	// Liste des pages à afficher
 
@@ -264,7 +264,7 @@ function pagination($sType, $iPage = 1, $iLimit = 50, $aParams = array())
 							);	// $iPage-1
 		}
 
-		// @todo créer les pages inétermédiaire
+		// @todo créer les pages inétermédiaires
 
 		// page courante
 		$aPages[$iPage] = 'javascript:;';
