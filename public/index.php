@@ -5,10 +5,10 @@ require '../private/config.php';
 // Chargement des  functions
 require DIR_INC.'functions.php';
 
-// On récupére toutes les infos de routing
+// On récupère toutes les infos de routing
 $aRoutingPageInfos = routeur((!empty($_GET['page']) ? $_GET['page'] : 'home'));
 
-// Si il y a un controleur (l'info provient de la fonction routeur)
+// S'il y a un contrôleur (l'info provient de la fonction routeur)
 // http://php.net/manual/fr/function.isset.php
 if (isset($aRoutingPageInfos['controller']) 
 	&& $aRoutingPageInfos['controller'] != false) 
