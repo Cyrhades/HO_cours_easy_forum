@@ -61,7 +61,7 @@ ________________________________________________________________________________
  
  Pour le moment la sécurité n'est pas très présente, n'importe qui peut poster 
  sur le forum sans être identifié, il n'y pas de systeme de captcha ou d'antiflood
- vous pouvez vous amusez à créer des modules complémentaires pour ce forum
+ vous pouvez vous amuser à créer des modules complémentaires pour ce forum
  
  - Enregistrement utilisateurs / profils
  - Système antiflood / Token / etc

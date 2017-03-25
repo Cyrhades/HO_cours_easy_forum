@@ -8,7 +8,7 @@
 // /!\ INTERDIT : const NOM_CONSTANTE = CONST_1_DECLARE_AVANT.'VALEUR_CONSTANTE'; 
 // Mais on peut faire : define('NOM_CONSTANTE', CONST_1_DECLARE_AVANT.'VALEUR_CONSTANTE');
 
-// Constante de l'url du site (le seul paramétre à modifier pour faire fonctionner
+// Constante de l'url du site (le seul paramètre à modifier pour faire fonctionner
 // Easy-Forum sur un autre serveur)
 define('URL_SITE','http://127.0.0.1/HO_cours_easy_forum/');
 
@@ -22,7 +22,7 @@ define('NB_LIMIT_POSTS', 20);
 define('NB_LIMIT_RESPONSES', 20);
 
 
-// Définition des différents chemin de nos dossiers
+// Définition des différents chemins de nos dossiers
 define('DIR_PRIVATE', __DIR__.DS);
 	define('DIR_DATA', DIR_PRIVATE.'data'.DS);
 		define('DIR_POSTS', DIR_DATA.'posts'.DS);

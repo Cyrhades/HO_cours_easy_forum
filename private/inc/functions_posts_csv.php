@@ -1,20 +1,20 @@
 <?php
 /**
- * Ce fichier gére les posts au format CSV, lecture, écriture, suppression, consolidation, etc
+ * Ce fichier gère les posts au format CSV, lecture, écriture, suppression, consolidation, etc
  */
 
-// Ce fichier nous permet de savoir combien il y a eut réellement de posts
+// Ce fichier nous permet de savoir combien il y a eu réellement de posts
 const FILENAME_NB_POST = 'posts.txt';
 
-// On crée le dossier post si il n'existe pas
+// On crée le dossier post s'il n'existe pas
 if (!file_exists(DIR_POSTS)) mkdir(DIR_POSTS, 0777, true);
 
 
-// Cette variable nous permettra de manipuler le CSV avec des index compréhensible
+// Cette variable nous permettra de manipuler le CSV avec des index compréhensibles
 $sIndexPosts = array(
 	'titre' 			=> 0, // la colonne 1 correspond au titre
 	'message' 			=> 1, // la colonne 2 correspond au message
-	'date_creation' 	=> 2, // la colonne 3 correspond a la date de création
+	'date_creation' 	=> 2, // la colonne 3 correspond à la date de création
 );
 
 /**
@@ -27,7 +27,7 @@ $sEnclosure	 = '"';
 $sEscape	 = '\\'; // comme ceci \\ pour échapper le caractére d'échappement ;-)
 
 /**
- * Retourne la premiere ligne d'un CSV (d'un post)
+ * Retourne la première ligne d'un CSV (d'un post)
  *
  * @since : 2017-01-15
  * @author : LECOMTE Cyril <cyrhades76@gmail.com>
@@ -59,7 +59,7 @@ function getPathFileResponseById($iIdPost)
 }
 
 /**
- * Retourne la premiere ligne d'un CSV (d'un post)
+ * Retourne la première ligne d'un CSV (d'un post)
  *
  * date modifier : 2017-01-15
  * @since : 2017-01-07
@@ -90,7 +90,7 @@ function getFirstLine($sPathFile)
 			// On veut capturer
 			preg_match('/.*post_([0-9]+).csv$/U', $sPathFile, $aDataId); 
 
-			// On récupére notre capture
+			// On récupère notre capture
 			$aPosts['id_post'] = $aDataId[1];
 			$aPosts['nb_reponses'] = numberResponses_CSV($aDataId[1]);
 
@@ -161,7 +161,7 @@ function getAllPosts_CSV($iStart = 0, $iLimit = 50)
 		// @see http://php.net/manual/fr/function.rsort.php
 		rsort($aList, SORT_NATURAL);
 
-		// On compte le nombre de post
+		// On compte le nombre de posts
 		$iNbPost = count($aList);
 
 		for ($i = 1; $i < $iNbPost+1;  $i++) {
@@ -185,7 +185,7 @@ function getAllPosts_CSV($iStart = 0, $iLimit = 50)
  * @author : LECOMTE Cyril <cyrhades76@gmail.com>
  * @package : easy-forum
  *
- * @param array Les données nécessaire à l'enregistrement
+ * @param array Les données nécessaires à l'enregistrement
  *
  * @return false|integer ID du post
  */
@@ -236,7 +236,7 @@ function savePost_CSV($aData)
  * @package : easy-forum
  *
  * @param integer L'id du post parent
- * @param array Les données nécessaire à l'enregistrement
+ * @param array Les données nécessaires à l'enregistrement
  *
  * @return true|string Message d'erreur
  */
@@ -287,7 +287,7 @@ function saveResponse_CSV($iIdPost, $aData)
  *
  * @param integer L'id du post
  * @param integer numéro de la page
- * @param integer nombre d'élément par page
+ * @param integer nombre d'éléments par page
  *
  * @return array Liste des reponses
  */
@@ -382,7 +382,7 @@ function numberResponses_CSV($iIdPost)
  * @package : easy-forum
  *
  * @param integer L'id du post
- * @return integer nombre de réponses reels pour un post
+ * @return integer nombre de réponses réelles pour un post
  */
 function consolideNumberResponses($iIdPost)
 {
