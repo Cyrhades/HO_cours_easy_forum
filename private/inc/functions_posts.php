@@ -128,7 +128,7 @@ function savePost($aData)
  * @package : easy-forum
  *
  * @param integer L'id du post parent
- * @param array Les données nécessaire à l'enregistrement
+ * @param array Les données nécessaires à l'enregistrement
  *
  * @return true|string Message d'erreur
  */
