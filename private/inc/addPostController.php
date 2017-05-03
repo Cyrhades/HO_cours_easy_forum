@@ -1,5 +1,5 @@
 <?php
-// Nous allons avoir besoin des functions pour enregistrer un post
+// Nous allons avoir besoin des fonctions pour enregistrer un post
 require_once DIR_INC.'functions_posts.php';
 
 
@@ -15,7 +15,7 @@ if (sizeof($_POST) > 0 && isset($_POST['save'])) {
 	// On laisse la méthode gérer l'enregistrement
 	$mResponse = savePost($_POST);
 
-	// Si l'enregistrement est OK la function nous retourne le numéro
+	// Si l'enregistrement est OK la fonction nous retourne le numéro
 	// (int) permet de caster (transformer) la variable en entier
 	// @see http://php.net/manual/fr/language.types.type-juggling.php
 	if ((int) $mResponse > 0) {
