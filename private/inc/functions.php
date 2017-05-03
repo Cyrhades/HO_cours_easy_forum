@@ -15,7 +15,7 @@
  */
 function routeur($sPage)
 {
-	// Par defaut le routeur nous emmene sur la home
+	// Par defaut le routeur nous emmène sur la home
 	$aRouting = array(
 		'view' 			=> 'home', 
 		'controller' 	=> 'home'
@@ -23,7 +23,7 @@ function routeur($sPage)
 
 	switch ($sPage)
 	{
-		// Rien à faire car ceux sont les valeurs par défaut de notre tableau ($aRouting)
+		// Rien à faire car ce sont les valeurs par défaut de notre tableau ($aRouting)
 		case 'home': break;  
 
 		// ICI ON GERE TOUTES NOS PAGES (CONTROLLER ET VUE)
@@ -248,14 +248,14 @@ function pagination($sType, $iPage = 1, $iLimit = 50, $aParams = array())
 	if ($iNbPagePossible > 10) {
 		// on est pas à la premiere page on peut créer des << et <
 		if ($iPage > 1) {
-			// Premiere page
+			// Première page
 			$aPages['<<'] = go(	$sGoto, 
 								array_merge(
 									array('num_page' => 1) ,
 									$aParams
 								)
 							); 	// page 1 
-			// page precedente
+			// page précédente
 			$aPages['<'] = go(	$sGoto, 
 								array_merge(
 									array('num_page' => $iPage-1),
@@ -264,22 +264,22 @@ function pagination($sType, $iPage = 1, $iLimit = 50, $aParams = array())
 							);	// $iPage-1
 		}
 
-		// @todo créer les pages inétermédiaires
+		// @todo créer les pages intermédiaires
 
 		// page courante
 		$aPages[$iPage] = 'javascript:;';
 
 
-		// on est pas à la derniere page on peut créer des > et >>
+		// on est pas à la dernière page on peut créer des > et >>
 		if ($iPage < $iNbPagePossible) {
-			// page precedente
+			// page précédente
 			$aPages['>'] = go(	$sGoto, 
 								array_merge(
 									array('num_page' => $iPage+1),
 									$aParams 
 								)
 							);	// $iPage+1
-			// Derniere page
+			// Dernière page
 			$aPages['>>'] = go(	$sGoto, 
 								array_merge(
 									array('num_page' => $iNbPagePossible),
